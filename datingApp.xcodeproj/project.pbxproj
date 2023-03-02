@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E9B0DA67C0701A8CADC4EC1 /* Pods_datingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D962E9299087279520747CE0 /* Pods_datingApp.framework */; };
+		D13AF1BE29AEF73400CAF5E3 /* CreateOrSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AF1BD29AEF73400CAF5E3 /* CreateOrSignInViewController.swift */; };
 		D1E6DD9029AA164D00C4BCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DD8F29AA164D00C4BCE2 /* AppDelegate.swift */; };
 		D1E6DD9229AA164D00C4BCE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DD9129AA164D00C4BCE2 /* SceneDelegate.swift */; };
 		D1E6DD9429AA164D00C4BCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DD9329AA164D00C4BCE2 /* ViewController.swift */; };
 		D1E6DD9729AA164D00C4BCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E6DD9529AA164D00C4BCE2 /* Main.storyboard */; };
 		D1E6DD9929AA164F00C4BCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E6DD9829AA164F00C4BCE2 /* Assets.xcassets */; };
 		D1E6DD9C29AA164F00C4BCE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E6DD9A29AA164F00C4BCE2 /* LaunchScreen.storyboard */; };
+		D1E6DDA429AA186400C4BCE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E6DDA329AA186400C4BCE2 /* GoogleService-Info.plist */; };
+		D1E6DDA629AA1D8100C4BCE2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DDA529AA1D8100C4BCE2 /* ProfileViewController.swift */; };
+		D1E6DDA829AA1D8D00C4BCE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DDA729AA1D8D00C4BCE2 /* LoginViewController.swift */; };
+		D1E6DDAA29AA1D9600C4BCE2 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DDA929AA1D9600C4BCE2 /* CreateViewController.swift */; };
+		D1E6DDAC29AA1DA100C4BCE2 /* SwipingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DDAB29AA1DA100C4BCE2 /* SwipingViewController.swift */; };
+		D1EC619A29AF0E98006DE19A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC619929AF0E98006DE19A /* Extensions.swift */; };
+		D1EC619D29B01F98006DE19A /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC619C29B01F98006DE19A /* PhoneAuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FBBF95584DF19B29B020761 /* Pods-datingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-datingApp.debug.xcconfig"; path = "Target Support Files/Pods-datingApp/Pods-datingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A7CB19062E92A15C2E4505 /* Pods-datingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-datingApp.release.xcconfig"; path = "Target Support Files/Pods-datingApp/Pods-datingApp.release.xcconfig"; sourceTree = "<group>"; };
+		D13AF1BD29AEF73400CAF5E3 /* CreateOrSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrSignInViewController.swift; sourceTree = "<group>"; };
 		D1E6DD8C29AA164D00C4BCE2 /* datingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = datingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E6DD8F29AA164D00C4BCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1E6DD9129AA164D00C4BCE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +36,15 @@
 		D1E6DD9829AA164F00C4BCE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1E6DD9B29AA164F00C4BCE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1E6DD9D29AA164F00C4BCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E6DDA329AA186400C4BCE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1E6DDA529AA1D8100C4BCE2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D1E6DDA729AA1D8D00C4BCE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D1E6DDA929AA1D9600C4BCE2 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		D1E6DDAB29AA1DA100C4BCE2 /* SwipingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingViewController.swift; sourceTree = "<group>"; };
+		D1EC619929AF0E98006DE19A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D1EC619B29B01219006DE19A /* datingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = datingApp.entitlements; sourceTree = "<group>"; };
+		D1EC619C29B01F98006DE19A /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
+		D962E9299087279520747CE0 /* Pods_datingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_datingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9B0DA67C0701A8CADC4EC1 /* Pods_datingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4479AA3FF945644F47476860 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D962E9299087279520747CE0 /* Pods_datingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC0FEBEA2A19DA93D0F831AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FBBF95584DF19B29B020761 /* Pods-datingApp.debug.xcconfig */,
+				A9A7CB19062E92A15C2E4505 /* Pods-datingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D1E6DD8329AA164D00C4BCE2 = {
 			isa = PBXGroup;
 			children = (
 				D1E6DD8E29AA164D00C4BCE2 /* datingApp */,
 				D1E6DD8D29AA164D00C4BCE2 /* Products */,
+				BC0FEBEA2A19DA93D0F831AF /* Pods */,
+				4479AA3FF945644F47476860 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +97,7 @@
 		D1E6DD8E29AA164D00C4BCE2 /* datingApp */ = {
 			isa = PBXGroup;
 			children = (
+				D1EC619B29B01219006DE19A /* datingApp.entitlements */,
 				D1E6DD8F29AA164D00C4BCE2 /* AppDelegate.swift */,
 				D1E6DD9129AA164D00C4BCE2 /* SceneDelegate.swift */,
 				D1E6DD9329AA164D00C4BCE2 /* ViewController.swift */,
@@ -63,8 +105,24 @@
 				D1E6DD9829AA164F00C4BCE2 /* Assets.xcassets */,
 				D1E6DD9A29AA164F00C4BCE2 /* LaunchScreen.storyboard */,
 				D1E6DD9D29AA164F00C4BCE2 /* Info.plist */,
+				D1E6DDA329AA186400C4BCE2 /* GoogleService-Info.plist */,
+				D1E6DDAD29AB0C2D00C4BCE2 /* Login and Register */,
+				D1E6DDA529AA1D8100C4BCE2 /* ProfileViewController.swift */,
+				D1E6DDAB29AA1DA100C4BCE2 /* SwipingViewController.swift */,
+				D1EC619929AF0E98006DE19A /* Extensions.swift */,
 			);
 			path = datingApp;
+			sourceTree = "<group>";
+		};
+		D1E6DDAD29AB0C2D00C4BCE2 /* Login and Register */ = {
+			isa = PBXGroup;
+			children = (
+				D1E6DDA729AA1D8D00C4BCE2 /* LoginViewController.swift */,
+				D1E6DDA929AA1D9600C4BCE2 /* CreateViewController.swift */,
+				D13AF1BD29AEF73400CAF5E3 /* CreateOrSignInViewController.swift */,
+				D1EC619C29B01F98006DE19A /* PhoneAuthViewController.swift */,
+			);
+			path = "Login and Register";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1E6DDA029AA164F00C4BCE2 /* Build configuration list for PBXNativeTarget "datingApp" */;
 			buildPhases = (
+				677B60740A9299ECF075D439 /* [CP] Check Pods Manifest.lock */,
 				D1E6DD8829AA164D00C4BCE2 /* Sources */,
 				D1E6DD8929AA164D00C4BCE2 /* Frameworks */,
 				D1E6DD8A29AA164D00C4BCE2 /* Resources */,
+				8996F1596CEE21DAA77C011E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E6DD9C29AA164F00C4BCE2 /* LaunchScreen.storyboard in Resources */,
+				D1E6DDA429AA186400C4BCE2 /* GoogleService-Info.plist in Resources */,
 				D1E6DD9929AA164F00C4BCE2 /* Assets.xcassets in Resources */,
 				D1E6DD9729AA164D00C4BCE2 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +194,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		677B60740A9299ECF075D439 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-datingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8996F1596CEE21DAA77C011E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-datingApp/Pods-datingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-datingApp/Pods-datingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-datingApp/Pods-datingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1E6DD8829AA164D00C4BCE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D1E6DD9429AA164D00C4BCE2 /* ViewController.swift in Sources */,
+				D1EC619D29B01F98006DE19A /* PhoneAuthViewController.swift in Sources */,
+				D1EC619A29AF0E98006DE19A /* Extensions.swift in Sources */,
 				D1E6DD9029AA164D00C4BCE2 /* AppDelegate.swift in Sources */,
+				D1E6DDA629AA1D8100C4BCE2 /* ProfileViewController.swift in Sources */,
+				D1E6DDAC29AA1DA100C4BCE2 /* SwipingViewController.swift in Sources */,
+				D1E6DDAA29AA1D9600C4BCE2 /* CreateViewController.swift in Sources */,
+				D13AF1BE29AEF73400CAF5E3 /* CreateOrSignInViewController.swift in Sources */,
+				D1E6DDA829AA1D8D00C4BCE2 /* LoginViewController.swift in Sources */,
 				D1E6DD9229AA164D00C4BCE2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,19 +392,22 @@
 		};
 		D1E6DDA129AA164F00C4BCE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FBBF95584DF19B29B020761 /* Pods-datingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = datingApp/datingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HW53TJ4K2G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = datingApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,27 +415,33 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JackWalker.datingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D1E6DDA229AA164F00C4BCE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A7CB19062E92A15C2E4505 /* Pods-datingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = datingApp/datingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HW53TJ4K2G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = datingApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +449,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JackWalker.datingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
