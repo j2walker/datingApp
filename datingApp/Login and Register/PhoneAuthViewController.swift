@@ -7,37 +7,35 @@
 
 import UIKit
 
-protocol numTextFieldDelegate {
-    func textFieldDidDelete()
+protocol fieldDelegate {
+    func textFieldDidChange(textField: UITextField)
 }
 
-class PhoneAuthViewController: UIViewController, UITextFieldDelegate, numTextFieldDelegate {
-    func textFieldDidDelete() {
-        
-    }
+class PhoneAuthViewController: UIViewController, UITextFieldDelegate, fieldDelegate {
     
-    private var numTextFields = [UITextField]()
-    private var bottomLines = [CALayer]()
-
+    private var numTextFields : [numberTextField] = []
+    private var bottomLines : [CALayer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        for i in 0...5 {
-            let field = numTextFields[i]
-            let bottomLine = bottomLines[i]
-            field.delegate = self
-            field.addTarget(self, action: #selector(textFieldDidChange(textField: )), for: .editingChanged)
+        for _ in 0...5 {
+            let field = numberTextField()
+            let bottomLine = CALayer()
+            field.thisDelegate = self
+            field.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
             field.keyboardType = .numberPad
             field.backgroundColor = .white
             field.textColor = .black
             field.textAlignment = .center
             field.font = .systemFont(ofSize: 25)
             bottomLine.backgroundColor = UIColor.darkGray.cgColor
+            numTextFields.append(field)
+            bottomLines.append(bottomLine)
             view.addSubview(field)
             view.layer.addSublayer(bottomLine)
         }
-        
         numTextFields[0].becomeFirstResponder()
     }
     
@@ -50,74 +48,28 @@ class PhoneAuthViewController: UIViewController, UITextFieldDelegate, numTextFie
             field.frame = CGRect(x: 10 + prevX, y: 100, width: 50, height: 50)
             line.frame = CGRect(x: 10 + prevX, y: 151, width: 50, height: 2)
         }
-        input1.frame = CGRect(x: 30,
-                              y: 100,
-                              width: 50,
-                              height: 50)
-        bottomLine1.frame = CGRect(x: 30,
-                                   y: 151,
-                                   width: 50,
-                                   height: 2)
-        input2.frame = CGRect(x: input1.right + 10,
-                              y: 100,
-                              width: 50,
-                              height: 50)
-        bottomLine2.frame = CGRect(x: input1.right + 10,
-                                   y: 151,
-                                   width: 50,
-                                   height: 2)
-        input3.frame = CGRect(x: input2.right + 10,
-                              y: 100,
-                              width: 50,
-                              height: 50)
-        bottomLine3.frame = CGRect(x: input2.right + 10,
-                                   y: 151,
-                                   width: 50,
-                                   height: 2)
-        input4.frame = CGRect(x: input3.right + 10,
-                              y: 100,
-                              width: 50,
-                              height: 50)
-        bottomLine4.frame = CGRect(x: input3.right + 10,
-                                   y: 151,
-                                   width: 50,
-                                   height: 2)
-        input5.frame = CGRect(x: input4.right + 10,
-                              y: 100,
-                              width: 50,
-                              height: 50)
-        bottomLine5.frame = CGRect(x: input4.right + 10,
-                                   y: 151,
-                                   width: 50,
-                                   height: 2)
-        input6.frame = CGRect(x: input5.right + 10,
-                              y: 100,
-                              width: 50,
-                              height: 50)
-        bottomLine6.frame = CGRect(x: input5.right + 10,
-                                   y: 151,
-                                   width: 50,
-                                   height: 2)
     }
     
     @objc func textFieldDidChange(textField: UITextField) {
         let text = textField.text
+        print("in me :)")
         
         if  text?.count == 1 {
             switch textField {
-            case input1:
-                input2.becomeFirstResponder()
-            case input2:
-                input3.becomeFirstResponder()
-            case input3:
-                input4.becomeFirstResponder()
-            case input4:
-                input5.becomeFirstResponder()
-            case input5:
-                input6.becomeFirstResponder()
-            case input6:
-                input6.resignFirstResponder()
+            case numTextFields[0]:
+                numTextFields[1].becomeFirstResponder()
+            case numTextFields[1]:
+                numTextFields[2].becomeFirstResponder()
+            case numTextFields[2]:
+                numTextFields[3].becomeFirstResponder()
+            case numTextFields[3]:
+                numTextFields[4].becomeFirstResponder()
+            case numTextFields[4]:
+                numTextFields[5].becomeFirstResponder()
+            case numTextFields[5]:
+                numTextFields[5].resignFirstResponder()
                 self.view.endEditing(true)
+                codeFilled()
             default:
                 break
             }
@@ -125,18 +77,18 @@ class PhoneAuthViewController: UIViewController, UITextFieldDelegate, numTextFie
         
         if  text?.count == 0 {
             switch textField {
-            case input1:
-                input1.becomeFirstResponder()
-            case input2:
-                input1.becomeFirstResponder()
-            case input3:
-                input2.becomeFirstResponder()
-            case input4:
-                input3.becomeFirstResponder()
-            case input5:
-                input4.becomeFirstResponder()
-            case input6:
-                input5.becomeFirstResponder()
+            case numTextFields[0]:
+                numTextFields[0].becomeFirstResponder()
+            case numTextFields[1]:
+                numTextFields[0].becomeFirstResponder()
+            case numTextFields[2]:
+                numTextFields[1].becomeFirstResponder()
+            case numTextFields[3]:
+                numTextFields[2].becomeFirstResponder()
+            case numTextFields[4]:
+                numTextFields[3].becomeFirstResponder()
+            case numTextFields[5]:
+                numTextFields[4].becomeFirstResponder()
             default:
                 break
             }
@@ -146,46 +98,17 @@ class PhoneAuthViewController: UIViewController, UITextFieldDelegate, numTextFie
         }
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("in function")
-        if let char = string.cString(using: String.Encoding.utf8) {
-            print("not nil")
-            let isBackSpace = strcmp(char, "\\b")
-            if (isBackSpace == -92) {
-                switch textField {
-                case input1:
-                    input1.becomeFirstResponder()
-                case input2:
-                    input2.text = ""
-                    input1.becomeFirstResponder()
-                case input3:
-                    input3.text = ""
-                    input2.becomeFirstResponder()
-                case input4:
-                    input4.text = ""
-                    input3.becomeFirstResponder()
-                case input5:
-                    input5.text = ""
-                    input4.becomeFirstResponder()
-                case input6:
-                    input6.text = ""
-                    input5.becomeFirstResponder()
-                default:
-                    break
-                }
-            }
-            
-        }
-        return true
+    
+    
+    func codeFilled() {
+        
     }
 }
 
-
-
 class numberTextField : UITextField {
-    var myDelegate : numTextFieldDelegate!
+    var thisDelegate: fieldDelegate?
     override func deleteBackward() {
         super.deleteBackward()
-        myDelegate.textFieldDidDelete()
+        thisDelegate?.textFieldDidChange(textField: self)
     }
 }
