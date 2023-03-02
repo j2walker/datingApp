@@ -23,7 +23,7 @@ class SwipingViewController: UIViewController {
     private func validateAuth() {
         // if no one is signed in, present createOrSignInViewController
         if (FirebaseAuth.Auth.auth().currentUser == nil) {
-            let vc = CreateOrSignInViewController()
+            let vc = PhoneAuthViewController()
             let nav = UINavigationController(rootViewController: vc)
             // must make fullscreen, otherwise presenting a VC will make it a "page" (like 95% of the screen and can swipe out of it)
             nav.modalPresentationStyle = .fullScreen

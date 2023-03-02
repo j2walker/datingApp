@@ -11,6 +11,8 @@ import JGProgressHUD
 
 class CreateViewController: UIViewController, UITextFieldDelegate {
     
+    private let spinner = JGProgressHUD(style: .dark)
+    
     var bottomLine : CALayer = {
         let line = CALayer()
         line.backgroundColor = UIColor.darkGray.cgColor
@@ -145,15 +147,22 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func nextButtonTapped() {
-        guard let number = numberInputField.text else {
+        spinner.show(in: view)
+        guard let number = numberInputField.text, let country = countryCode.text else {
+            spinner.dismiss()
             return
         }
-        PhoneAuthProvider.provider().verifyPhoneNumber(number, uiDelegate: nil) { verificationID, error in
+        PhoneAuthProvider.provider().verifyPhoneNumber("+"+country+number, uiDelegate: nil) { [weak self] verificationID, error in
             if let error = error {
                 print("error verifying phone number with \(error)")
+                self?.spinner.dismiss()
                 return
             }
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+            self?.spinner.dismiss()
+            let vc = PhoneAuthViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self?.present(vc, animated: true)
         }
     }
     
