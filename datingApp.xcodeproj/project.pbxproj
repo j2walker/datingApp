@@ -22,6 +22,7 @@
 		D1E6DDAC29AA1DA100C4BCE2 /* SwipingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6DDAB29AA1DA100C4BCE2 /* SwipingViewController.swift */; };
 		D1EC619A29AF0E98006DE19A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC619929AF0E98006DE19A /* Extensions.swift */; };
 		D1EC619D29B01F98006DE19A /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC619C29B01F98006DE19A /* PhoneAuthViewController.swift */; };
+		D1FC87D129B11C9C00A46214 /* AuthHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC87D029B11C9C00A46214 /* AuthHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D1EC619929AF0E98006DE19A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D1EC619B29B01219006DE19A /* datingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = datingApp.entitlements; sourceTree = "<group>"; };
 		D1EC619C29B01F98006DE19A /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
+		D1FC87D029B11C9C00A46214 /* AuthHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHandler.swift; sourceTree = "<group>"; };
 		D962E9299087279520747CE0 /* Pods_datingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_datingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				D1E6DDA529AA1D8100C4BCE2 /* ProfileViewController.swift */,
 				D1E6DDAB29AA1DA100C4BCE2 /* SwipingViewController.swift */,
 				D1EC619929AF0E98006DE19A /* Extensions.swift */,
+				D1FC87D029B11C9C00A46214 /* AuthHandler.swift */,
 			);
 			path = datingApp;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				D1E6DD9029AA164D00C4BCE2 /* AppDelegate.swift in Sources */,
 				D1E6DDA629AA1D8100C4BCE2 /* ProfileViewController.swift in Sources */,
 				D1E6DDAC29AA1DA100C4BCE2 /* SwipingViewController.swift in Sources */,
+				D1FC87D129B11C9C00A46214 /* AuthHandler.swift in Sources */,
 				D1E6DDAA29AA1D9600C4BCE2 /* CreateViewController.swift in Sources */,
 				D13AF1BE29AEF73400CAF5E3 /* CreateOrSignInViewController.swift in Sources */,
 				D1E6DDA829AA1D8D00C4BCE2 /* LoginViewController.swift in Sources */,

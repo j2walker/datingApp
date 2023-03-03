@@ -13,7 +13,13 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
     
     private let spinner = JGProgressHUD(style: .dark)
     
-    var bottomLine : CALayer = {
+    var numberInputBottomLine : CALayer = {
+        let line = CALayer()
+        line.backgroundColor = UIColor.darkGray.cgColor
+        return line
+    }()
+    
+    var countryInputBottomLine : CALayer = {
         let line = CALayer()
         line.backgroundColor = UIColor.darkGray.cgColor
         return line
@@ -41,6 +47,7 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         textView.font = .systemFont(ofSize: 27, weight: .semibold)
         textView.textColor = .black
         textView.textAlignment = .center
+        textView.backgroundColor = .white
         return textView
     }()
     
@@ -51,6 +58,9 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         textView.isEditable = false
         textView.isSelectable = false
         textView.isScrollEnabled = false
+        textView.backgroundColor = .white
+        textView.textColor = .black
+        textView.textAlignment = .center
         return textView
     }()
     
@@ -59,6 +69,8 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         field.keyboardType = .numberPad
         field.text = "1"
         field.font = .systemFont(ofSize: 20, weight: .semibold)
+        field.textColor = .black
+        field.textAlignment = .left
         return field
     }()
     
@@ -71,12 +83,22 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
+    let signOutButton : UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Sign Out", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        button.titleLabel?.textColor = .red
+        button.titleLabel?.textAlignment = .center
+        return button
+    }()
+    
     let numberInputField : UITextField = {
         let field = UITextField()
         field.keyboardType = .numberPad
         field.autocorrectionType = .no
         field.autocapitalizationType = .none
         field.borderStyle = .none
+        field.textColor = .black
         field.font = .systemFont(ofSize: 20, weight: .semibold)
         return field
     }()
@@ -91,7 +113,8 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(numberInputField)
         view.addSubview(countryCode)
         view.addSubview(plusSign)
-        view.layer.addSublayer(bottomLine)
+        view.layer.addSublayer(numberInputBottomLine)
+        view.layer.addSublayer(countryInputBottomLine)
         numberInputField.becomeFirstResponder()
     }
     
@@ -105,28 +128,38 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
                                     y: backButton.bottom + 30,
                                     width: view.width - 60,
                                     height: 40)
-        plusSign.frame = CGRect(x: 30,
-                                y: canGetNumber.bottom + 20,
+        plusSign.frame = CGRect(x: 40,
+                                y: canGetNumber.bottom + 14,
                                 width: 20,
                                 height: 30)
-        countryCode.frame = CGRect(x: plusSign.right + 5,
+        countryCode.frame = CGRect(x: plusSign.right,
                                    y: canGetNumber.bottom + 20,
                                    width: 35,
                                    height: 30)
-        numberInputField.frame = CGRect(x: countryCode.right + 10,
+        numberInputField.frame = CGRect(x: countryCode.right + 4,
                                         y: canGetNumber.bottom + 20,
                                         width: view.width-90,
                                         height: 30)
-        bottomLine.frame = CGRect(x: countryCode.right + 10,
+        numberInputBottomLine.frame = CGRect(x: countryCode.right + 4,
                                   y: numberInputField.bottom + 1,
-                                  width: view.width-90,
+                                  width: 250,
                                   height: 2)
+        
+        countryInputBottomLine.frame = CGRect(x: plusSign.left,
+                                              y: numberInputField.bottom + 1,
+                                              width: 55,
+                                              height: 2)
         
         nextButton.frame = CGRect(x: 30,
                               y: numberInputField.bottom + 11,
                               width: view.width-60,
                               height: 50)
         nextButton.layer.insertSublayer(createGradient(), at: 0)
+        
+        signOutButton.frame = CGRect(x: 100,
+                              y: 250,
+                              width: 200,
+                              height: 50)
         
         view.addSubview(nextButton)
     }
@@ -159,6 +192,7 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+            UserDefaults.standard.set("+"+country+number, forKey: "userPhoneNumber")
             self?.spinner.dismiss()
             let vc = PhoneAuthViewController()
             vc.modalPresentationStyle = .fullScreen
@@ -184,8 +218,4 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         gradientLayer.shouldRasterize = true
         return gradientLayer
     }
-    
-    
-
-
 }
